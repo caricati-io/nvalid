@@ -7,10 +7,14 @@ import isEmail, { regex as regexEmail } from './lib/is-email'
 import isUsername, { regex as regexUsername } from './lib/is-username'
 
 import validator from './validator'
+import isMin from './lib/is-min'
+import isMax from './lib/is-max'
 
 export {
   isEmail,
   isIp,
+  isMin,
+  isMax,
   isMatch,
   isPassword,
   isRequired,
