@@ -8,7 +8,7 @@ export default function isMin(input: any, number: number) {
     return input <= number
   }
   if (input instanceof Date) {
-    return input <= new Date(number)
+    return input.getTime() <= number
   }
   throw new ValidationException(`The type "${typeof input}" is not valid.`)
 }

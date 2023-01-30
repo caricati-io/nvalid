@@ -1,5 +1,5 @@
 {
-  "extends": ["airbnb", "airbnb-typescript"],
+  "extends": ["airbnb", "airbnb-typescript", "prettier"],
   "parserOptions": {
     "parser": "@typescript-eslint/parser",
     "project": "./tsconfig.json"
@@ -7,7 +7,6 @@
   "plugins": ["@typescript-eslint"],
   "rules": {
     "semi": ["error", "never"],
-    "object-curly-newline": "off",
     "@typescript-eslint/semi": ["error", "never"]
   }
 }
