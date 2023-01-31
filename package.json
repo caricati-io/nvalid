@@ -1,19 +1,25 @@
 {
-  "name": "@caricati/validation",
+  "name": "@caricati/nvalid",
   "version": "0.1.0",
   "license": "MIT",
   "source": "src/exports.ts",
   "main": "dist/exports.js",
   "types": "dist/index.d.ts",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/caricati"
+  "homepage": "https://github.com/caricati-io/nvalid",
+  "author": "Thales Caricati <mrcaricati@proton.me>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caricati-io/nvalid.git"
   },
   "scripts": {
-    "check": "CI=true npm run lint && npm test && tsc --project ./tsconfig.json --noEmit",
-    "test": "jest",
+    "check": "",
+    "prepublishOnly": "rm -rf ./dist && npm test && npm run build",
+    "build": "tsc --project tsconfig.build.json",
+    "test": "CI=true npm run lint && jest && tsc --project ./tsconfig.json --noEmit",
     "lint": "eslint ./src",
     "test:cover": "jest --coverage",
-    "test:dev": "jest --watchAll --verbose --coverage"
+    "test:dev": "jest --watchAll --verbose --coverage",
+    "release": "np"
   },
   "devDependencies": {
     "@babel/cli": "^7.20.7",

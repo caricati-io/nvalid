@@ -3,8 +3,7 @@
     "target": "esnext",
     "lib": ["esnext"],
     "module": "esnext",
-    "moduleResolution": "node",
-    "outDir": "dist"
+    "moduleResolution": "node"
   },
   "include": ["src", ".eslintrc"]
 }
