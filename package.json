@@ -12,6 +12,7 @@
     "check": "CI=true npm run lint && npm test && tsc --project ./tsconfig.json --noEmit",
     "test": "jest",
     "lint": "eslint ./src",
+    "test:cover": "jest --coverage",
     "test:dev": "jest --watchAll --verbose --coverage"
   },
   "devDependencies": {
