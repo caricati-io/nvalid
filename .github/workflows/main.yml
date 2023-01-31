@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-          npm run check
+          npm test
           npm run test:cover
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
