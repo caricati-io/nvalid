@@ -16,9 +16,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
+        uses: codecov/codecov-action@v3
         run: |
           npm install
           npm run check
-      - name: Run tests to collect coverage
-        run: npm run test:cover
-        uses: codecov/codecov-action@v3
+          npm run test:cover
