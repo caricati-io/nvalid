@@ -1,7 +1,7 @@
 # nvalid
 
 <br />
-<img src="./.github/logo.svg" alt="Caricati.io - Design System" width="400">
+<img src="./.github/logo.svg" alt="Caricati.io - Design System" width="300">
 
 A lightweight validation library written in javascript.
 

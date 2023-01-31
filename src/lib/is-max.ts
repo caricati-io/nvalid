@@ -1,4 +1,4 @@
-import ValidationException from '../exception/validation'
+import ValidationException from '../exception'
 
 export default function isMax(input: any, number: number) {
   if (typeof input === 'string') {
