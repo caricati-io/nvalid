@@ -1,10 +1,4 @@
-# nvalid
-
-<br />
-<img src="./.github/logo.svg" alt="Caricati.io - Design System" width="300">
-
-A lightweight validation library written in javascript.
-
+<img src="./.github/logo.svg" alt="Caricati.io - Design System" width="406">
 <p>
   <a href="https://www.npmjs.com/package/@caricati/nvalid">
     <img src="https://img.shields.io/badge/package-npm-FA9703" alt="npm">
@@ -17,17 +11,39 @@ A lightweight validation library written in javascript.
     <img src="https://img.shields.io/badge/license-MIT-292F3A" alt="MIT">
   </a>
 </p>
-<hr />
+<br />
 
-## To install
+
+# nvalid
+A lightweight validation library written in JavaScript.
+
+## Install
+
+Install **nvalid** dependency using node package manager:
+
 ```
-npm install @caricati/nvalid --save
+npm i @caricati/nvalid
 ```
 
 ## Using
+
+Use only a fragment from the library:
+
 ```
 import { isEmail } from '@caricati/nvalid'
 
 isEmail('invalid email@here') // false
 isEmail('name@email.com') // true
+```
+
+Use a collection of validations:
+
+```
+import validate from '@caricati/nvalid'
+
+validate('user@email.com').email().required() // passed
+validate('Mr. Caricati').string().required() // passed
+
+validate('my ip').ip() // handle exception
+validate('').required() // handle exception
 ```
