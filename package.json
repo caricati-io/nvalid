@@ -1,6 +1,6 @@
 {
   "name": "@caricati/nvalid",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "source": "src/exports.ts",
   "main": "dist/js/exports.js",
