@@ -3,8 +3,8 @@
   "version": "1.0.1",
   "license": "MIT",
   "source": "src/exports.ts",
-  "main": "dist/exports.js",
-  "types": "dist/exports.d.ts",
+  "main": "dist/js/exports.js",
+  "types": "dist/types/exports.d.ts",
   "homepage": "https://github.com/caricati-io/nvalid",
   "author": "Thales Caricati <mrcaricati@proton.me>",
   "repository": {
@@ -13,7 +13,7 @@
   },
   "scripts": {
     "prepublishOnly": "rm -rf ./dist && npm test && npm run build",
-    "build": "tsc --project tsconfig.build.json",
+    "build": "rm -rf ./dist && BABEL_ENV=esm babel --source-maps --extensions \".js,.ts\" --ignore \"src/tests\" src --out-dir dist/js && tsc --project ./tsconfig.build.json",
     "test": "CI=true eslint ./src && jest && tsc --project ./tsconfig.json --noEmit",
     "test:cover": "jest --coverage",
     "test:dev": "jest --watchAll --verbose --coverage",
