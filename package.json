@@ -4,7 +4,7 @@
   "license": "MIT",
   "source": "src/exports.ts",
   "main": "dist/exports.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/exports.d.ts",
   "homepage": "https://github.com/caricati-io/nvalid",
   "author": "Thales Caricati <mrcaricati@proton.me>",
   "repository": {
